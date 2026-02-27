@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "SleekDL",
+  "version": "1.0.0",
+  "description": "Drop a link, grab the file. No nonsense.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "SleekDLを開く"
+  },
+  "permissions": [
+    "activeTab",
+    "downloads"
+  ],
+  "host_permissions": [
+    "http://127.0.0.1:8000"
+  ]
+}
