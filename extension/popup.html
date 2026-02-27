@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            width: 320px;
+            background-color: #0f172a;
+            color: #f8fafc;
+            font-family: system-ui, -apple-system, sans-serif;
+            padding: 16px;
+            margin: 0;
+        }
+        h1 { text-align: center; color: #22d3ee; margin-top: 0; font-size: 1.5rem; letter-spacing: 0.05em; }
+        label { font-size: 0.75rem; color: #94a3b8; display: block; margin-bottom: 4px; text-transform: uppercase; }
+        input, select {
+            width: 100%; box-sizing: border-box; background: #1e293b; 
+            border: 1px solid #334155; color: white; padding: 10px; 
+            border-radius: 6px; margin-bottom: 16px; font-size: 0.875rem;
+        }
+        input:focus, select:focus { outline: none; border-color: #22d3ee; }
+        button {
+            width: 100%; background: #0891b2; color: white; border: none; 
+            padding: 12px; border-radius: 6px; font-weight: bold; cursor: pointer;
+            transition: background 0.2s;
+        }
+        button:hover { background: #06b6d4; }
+        #status { margin-top: 12px; font-size: 0.8rem; text-align: center; font-weight: bold; }
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+    <h1>SleekDL</h1>
+    <form id="dl-form">
+        <label>Target URL</label>
+        <input type="url" id="url" required>
+        
+        <label>Format</label>
+        <select id="format">
+            <option value="mp4_1080">MP4 (1080p - Best)</option>
+            <option value="mp3">MP3 (Audio Only)</option>
+        </select>
+        
+        <button type="submit">Download</button>
+    </form>
+    
+    <div id="status" class="hidden"></div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
